@@ -1,3 +1,6 @@
 JS execution
 https://medium.com/@happymishra66/execution-context-in-javascript-319dd72e8e2c
 https://www.freecodecamp.org/news/how-javascript-works-behind-the-scene-javascript-execution-context/#:~:text=There%20are%20two%20types%20of,representing%20the%20function's%20local%20scope.
+
+JavaScript:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
