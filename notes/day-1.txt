@@ -43,11 +43,47 @@ ECMA:
 	ES5<2015-ES6>ES6+
 	a. templated string (string template)
 	b. let and const keyword
+	c. class, constructor, extends, super
+	d. spread operator (object and array)
+	e. object destructuring (object and array)
+	f. rest operator
+	g. arrow function: the function will be bound to the same "this" object as that of the immediate outer scope
+
+Closure: maintaining state (state of all local variables and functions) of all outer scopes for any function
 
 
 person function => prototype object
 						- constructor (reference to person function itself)
 						- proto
+
+
+how to create JS objects:
+	a. object literal syntax:
+	var anilObject = { prop1:value1, funcProp1:function(){}}
+
+	b. constructor function
+	function person(name,id,salary){
+		this.personName= name
+		..................
+		this.print = function(){}
+	}
+
+
+	function person(name,id,salary){
+		this.personName= name
+		..................
+	}
+	person.prototype.print = function(){}
+
+	c. new class/constructor keyword of ES6 (2015):
+	class Person{
+		constructor(name,id,salary){
+			this.personName= name
+			..................
+		}
+		print(){}
+	}
+
 
 
 
