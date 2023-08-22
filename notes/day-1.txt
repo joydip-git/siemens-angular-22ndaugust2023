@@ -85,6 +85,60 @@ how to create JS objects:
 	}
 
 
+module: an API to expose members of one file to another
+
+module formats:
+a. common js format
+module.exports={prop1:member1,....}
+const {prop1}=  require('....')
+
+b. ES6 module format
+c. AMD ( asynchronous module definition) format
+d. UMD (Universal module definition) format
+
+module loader:
+requirejs
+systemjs
+
+
+
+Node JS: C:\Program Files\nodejs
+3rd Party tools(s/w) installed using NPM (node package manager) globally
+C:\Users\joydip\AppData\Roaming\npm
+>npm install <package-name> --global
+
+other package managers: yarn, bower etc.
+
+
+{prop-name:value, prop-name:function(){}}
+
+var x= 10
+[{"x":10},{}]
+
+command to create package.json file
+>npm init
+or
+>npm init --yes
+
+install development dependency for application:
+>npm i <package-name> -D
+or
+>npm i <package-name> --save-dev (old)
+
+install complete dependency for application:
+>npm i <package-name>
+or
+>npm i <package-name> --save (old)
+
+
+command to create tsconfig.json file:(use tsc)
+>.\node_modules\.bin\tsc --init
+
+
+
+
+
+
 
 
 
