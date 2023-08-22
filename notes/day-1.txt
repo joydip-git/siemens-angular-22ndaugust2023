@@ -30,6 +30,26 @@ JS execution environment:
 	- node js (server side framework)
 
 
+JS execution-
+	a. preparation stage
+	b. execution stage
+
+JS hoisting
+	- variable declarations
+	- function declarations (NOT expressions)
+
+ECMA:
+	ECMAScript
+	ES5<2015-ES6>ES6+
+	a. templated string (string template)
+	b. let and const keyword
+
+
+person function => prototype object
+						- constructor (reference to person function itself)
+						- proto
+
+
 
 
 	
