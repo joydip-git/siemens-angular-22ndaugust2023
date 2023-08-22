@@ -1,1 +1,36 @@
-angular training
+angular:
+	JS Framework
+	SPA
+	client-side fornt-end framework
+	web application, mobile application, headless browser application
+
+Language: TypeScript
+
+JavaScript
+TypeScript
+Node JS
+general web development
+	- tools
+	- transpiler
+	- bundler tool (webpack)
+	- app dev server
+
+
+JS engine:
+	v8 - chrome
+	firefox - spidermonkey
+	safari - JSCore	
+
+Node JS- 2009 Ryan Dahl
+Deno
+
+
+JS execution environment:
+	- browser
+	- node js (server side framework)
+
+
+
+
+	
+	
