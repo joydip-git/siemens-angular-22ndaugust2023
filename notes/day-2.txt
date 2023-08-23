@@ -28,4 +28,75 @@ assets:
 	module			class							@NgModule
 													expotr class XModule{}	x.module.ts
 	
+
+
+data binding:
+	passing data from view to code and vice versa of a component
+
+1. passing data from code to view
+	a. interpolation {{<data-member/property/model-data>}}
+	b. property binding: <html-element [attribute-name]="class-prop-name">
+2. passing data from view to code
+	event binding
+
+
+
+data		element
+title	=>	h2
+title	<=>	input
+
+
+directives:
+	custom attributes to extend the behavior for different purpose of existing elements
+	a. structural: is used for DOM manipulation. 
+	syntax: *ngX
+	ex: NgIf, NgForOf, NgSwitch, NgIfElse
+	module: @angular/common => CommonModule
+
+	@Directive({selector:"[ngFor]"})
+	export class NgForOfDirective{
+		func(template, expr){
+		}
+	}
+
+	@NgModule({
+		declarations:[ NgForOfDirective]
+	})
+	export class CommonModule{}
+
+
+	@NgModule({
+		declarations:[],
+		imports:[CommonModule],
+		exports:[CommonModule]
+	})
+	export class BrowserModule{}
+
+	b. attribute directive: just extend the behavior of the element
+	syntax: ngX
+	ex: ngModel, ngForm (@angular/forms => FormsModule), 
+	formControl, formGroup, formControlName, formGroupName(@angular/forms => ReactiveFormsModule)
+
+	c. component directive
+
+
+Service: 
+a. create service
+b. register service (3 types of Injector)
+		i.   asset level
+		ii.  feature module level
+		iii. root module level
+c. consume service
+
+
+
+
+
+
+
+
+
+
+
+
 	
