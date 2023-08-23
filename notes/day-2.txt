@@ -89,6 +89,29 @@ b. register service (3 types of Injector)
 c. consume service
 
 
+Angular forms:
+	a. template-driven form
+		everything is controlled from the template using ngForm, ngModel etc. directives
+		directive classes: NgForm, NgModel (@angular/forms => FormsModule)
+		types: FormGroup, FormControl etc.
+
+	b. reactive form:
+		everything is controlled from the code using fromControl, formGroup etc. directives
+		directives: formControl, formControlName, fromGroup, fornGroupName (@angular/forms =>ReactiveFormsModule)
+		types: FormGroup, FormControl etc.
+
+	errors:{ required:true}
+			{minlength:{actualLength:, requiredLength:}}
+
+	interface ValidationErrors{
+		[key:string]:any;
+	}
+
+	function customValidate(control:AbstractControl):ErrorResponse|null{
+	}
+		
+
+
 
 
 

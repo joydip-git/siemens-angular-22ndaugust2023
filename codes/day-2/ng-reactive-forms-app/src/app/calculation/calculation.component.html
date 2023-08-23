@@ -1,0 +1,48 @@
+<form *ngIf="frm" [formGroup]="frm" (submit)="calculate()">
+    <div>
+        <label for="txtFirst">First: &nbsp;</label>
+        <!-- <input type="text" id="txtFirst" [formControl]="first"> -->
+        <input type="text" id="txtFirst" formControlName="first">
+    </div>
+    <div *ngIf="first?.errors">
+        <div *ngIf="(first?.touched || first?.dirty) && first?.errors?.['required']">
+            <span>enter value</span>
+        </div>
+        <div *ngIf="(first?.touched || first?.dirty) && first?.errors?.['minlength']">
+            <span>please enter {{first?.errors?.['minlength'].requiredLength}} digits, as you have entered
+                {{first?.errors?.['minlength'].actualLength}}</span>
+        </div>
+        <div *ngIf="(first?.touched || first?.pristine) && first?.errors?.['range']">
+            <span>please enter vakues within: {{first?.errors?.['range'].requiredRange}} , as you have entered
+                {{first?.errors?.['range'].actualValue}}</span>
+        </div>
+    </div>
+    <div>
+        <label for="txtSecond">Second: &nbsp;</label>
+        <!-- <input type="text" id="txtSecond" [formControl]="second"> -->
+        <input type="text" id="txtSecond" formControlName="second">
+    </div>
+    <div *ngIf="second?.errors">
+        <div *ngIf="(second?.touched || second?.dirty) && second?.errors?.['required']">
+            <span>enter value</span>
+        </div>
+        <div *ngIf="(second?.touched || second?.pristine) && second?.errors?.['minlength']">
+            <span>please enter {{second?.errors?.['minlength'].requiredLength}} digits, as yiu have entered
+                {{second?.errors?.['minlength'].actualLength}}</span>
+        </div>
+        <div *ngIf="(second?.touched || second?.pristine) && second?.errors?.['range']">
+            <span>please enter vakues within: {{second?.errors?.['range'].requiredRange}} , as you have entered
+                {{second?.errors?.['range'].actualValue}}</span>
+        </div>
+    </div>
+    <div>
+        <!-- <input type="submit" value="Calculate" (click)="calculate()"> -->
+        <input type="submit" value="Calculate" [disabled]="!frm.valid">
+    </div>
+</form>
+<br>
+
+<div>
+    <label for="txtResult">Result: &nbsp;</label>
+    <input type="text" id="txtResult" readonly value="{{result}}">
+</div>

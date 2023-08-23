@@ -1,0 +1,40 @@
+<form (submit)="calculate(frm)" ngForm #frm="ngForm">
+    <div>
+        <label for="txtFirst">First: &nbsp;</label>
+        <!-- <input type="text" id="txtFirst" [(ngModel)]="first" name="firstTextBox"> -->
+        <input type="text" id="txtFirst" ngModel #first="ngModel" name="firstTextBox" required [minlength]="2">
+    </div>
+    <div *ngIf="first.errors">
+        <div *ngIf="(first.touched || first.dirty) && first.errors['required']">
+            <span>enter value</span>
+        </div>
+        <div *ngIf="(first.touched || first.dirty) && first.errors['minlength']">
+            <span>please enter {{first.errors['minlength'].requiredLength}} digits, as yiu have entered
+                {{first.errors['minlength'].actualLength}}</span>
+        </div>
+    </div>
+    <div>
+        <label for="txtSecond">Second: &nbsp;</label>
+        <!-- <input type="text" id="txtSecond" [(ngModel)]="second" name="secondTextBox"> -->
+        <input type="text" id="txtSecond" ngModel #second="ngModel" name="secondTextBox" required [minlength]="2">
+    </div>
+    <div *ngIf="second.errors">
+        <div *ngIf="(second.touched || second.dirty) && second.errors['required']">
+            <span>enter value</span>
+        </div>
+        <div *ngIf="(second.touched || second.pristine) && second.errors['minlength']">
+            <span>please enter {{second.errors['minlength'].requiredLength}} digits, as yiu have entered
+                {{second.errors['minlength'].actualLength}}</span>
+        </div>
+    </div>
+    <div>
+        <!-- <input type="button" value="Calculate" (click)="calculate()"> -->
+        <input type="submit" value="Calculate" [disabled]="!frm.valid">
+    </div>
+</form>
+<br>
+
+<div>
+    <label for="txtResult">Result: &nbsp;</label>
+    <input type="text" id="txtResult" readonly [ngModel]="result">
+</div>
