@@ -1,0 +1,31 @@
+Angular:
+	client-side UI framework
+	SPA
+	Declarrative programming
+	
+
+Features:
+	data binding
+	Piping
+	client-side routing
+	services
+	directives
+	angular modules
+
+assets:
+	component		class		Component()       @Component
+													export class XComponent{} x.component.ts/html/css
+
+	directive		class		Directive()		@Directive
+													export class XDirective{} x.directive.ts
+
+	pipe			class							@Pipe
+													export class XPipe{}		 x.pipe.ts
+
+	service			class							@Injectable()
+													expotr class XService{}	 x.service.ts
+
+	module			class							@NgModule
+													expotr class XModule{}	x.module.ts
+	
+	
