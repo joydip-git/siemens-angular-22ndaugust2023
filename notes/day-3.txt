@@ -16,3 +16,122 @@ reactivex.io
 	- net, java, js, scala, ....
 
 rxjs: reactive extensions to JS
+
+URL										METHOD			  DATA					RESPONSE
+----------------------------------------------------------------------------------------------------------
+http://127.0.0.1:3003/products			GET				NA				{"message":"","data":[{},{},...]}
+
+http://127.0.0.1:3003/products/{id}		GET				id				{"message":"","data":{}}
+http://127.0.0.1:3003/products/{id}		GET				id				{"message":"","data":null}
+
+http://127.0.0.1:3003/products			POST			{...}			{"message":"","data":[{},{},...]}
+http://127.0.0.1:3003/products			POST			{...}			{"message":"","data":null}
+
+http://127.0.0.1:3003/products/{id}		PUT			id, {...}				{"message":"","data":[{},{},...]}
+http://127.0.0.1:3003/products/{id}		PUT			id, {...}				{"message":"","data":null}
+
+http://127.0.0.1:3003/products/{id}		DELETE			id				{"message":"","data":[{},{},...]}
+http://127.0.0.1:3003/products/{id}		DELETE			id				{"message":"","data":null}
+
+
+project structure:
+
+src
+
+app
+		app.module.ts
+		app.component.ts
+		app.component.css
+		app.component.html
+		app.component.spec.ts		
+
+	
+	models
+		product.ts => 
+		api-response.ts => message:string, data:T
+   modules
+		products
+			products.module.ts
+			
+			components
+				product-list
+					product-list.component.ts
+					product-list.component.html
+					product-list.component.css
+
+				product-detail
+					product-detail.component.ts
+					product-detail.component.html
+					product-detail.component.css
+
+				add-product
+					add-product.component.ts
+					add-product.component.html
+					add-product.component.css
+
+				update-product
+					update-product.component.ts
+					update-product.component.html
+					update-product.component.css
+
+				filter-product
+					filter-product.component.ts
+					filter-product.component.html
+					filter-product.component.css
+
+
+			services
+					product.service.ts
+
+			pipes
+					product-filter.pipe.ts
+
+			directives	
+
+			validators
+				*.ts
+
+
+http://localhost:4200/
+http://localhost:4200/home => Home
+
+
+http://localhost:4200/products => PL <= FP
+http://localhost:4200/products/view/{id} => PD
+http://localhost:4200/products/update => UP
+http://localhost:4200/products/add => AP
+
+
+
+dashboard (nested)
+pagenotfound
+
+Routing: @angular/router => RouterModule
+	types:
+		Route => path and component
+		Routes (Route[])
+		
+	RouterModule.forRoot(array of routes)
+	//RouterModule.forChild(array of routes)
+
+	*.module.ts
+	*-routing.module.ts
+
+
+	component directive:router-outlet
+	attribute directive: routerLink
+
+		
+
+
+
+
+
+					
+
+
+
+
+
+
+
