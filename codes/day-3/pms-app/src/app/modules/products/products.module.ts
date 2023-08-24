@@ -8,6 +8,7 @@ import { FilterProductComponent } from './components/filter-product/filter-produ
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductService } from './services/product.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductFilterPipe } from './pipes/product-filter.pipe';
 
 
 
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductDetailComponent,
     AddProductComponent,
     UpdateProductComponent,
-    FilterProductComponent
+    FilterProductComponent,
+    ProductFilterPipe
   ],
   imports: [
     CommonModule,

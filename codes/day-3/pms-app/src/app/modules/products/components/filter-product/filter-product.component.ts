@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter-product',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class FilterProductComponent {
 
+  filterText = ''
+
+  @Output() filterTextChanged = new EventEmitter<string>()
+
+  passFilterText(data: string) {
+    this.filterText = data
+    this.filterTextChanged.emit(this.filterText)
+  }
 }

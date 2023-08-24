@@ -12,6 +12,10 @@
 
 <div *ngIf="loadingComplete===true;else loadingTemplate">
     <div *ngIf="errorMessage==='';else errorTemplate">
+        <h2 class="text-muted">List of Products:</h2>
+        <br>
+        <app-filter-product (filterTextChanged)="receiveFilterText($event)"></app-filter-product>
+        <br>
         <table *ngIf="products;else noRecordTemplate" class="table table-hover">
             <thead class="header-style">
                 <tr>
@@ -24,15 +28,15 @@
             </thead>
             <!-- <tbody class="table-dark"> -->
             <tbody>
-                <tr *ngFor="let p of products">
+                <tr *ngFor="let p of (products|productfilter:filterTextValue)">
                     <td>
                         <img [src]="p.imageUrl" alt="NA" [title]="p.productName" class="img-style">
                     </td>
                     <td>
-                        {{p.productName}}
+                        {{p.productName|uppercase}}
                     </td>
                     <td>
-                        {{p.price}}
+                        {{p.price|currency:'INR'}}
                     </td>
                     <td>
                         {{p.starRating}}

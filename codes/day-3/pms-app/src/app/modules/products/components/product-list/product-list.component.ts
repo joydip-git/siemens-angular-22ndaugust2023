@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   private psSubscription?: Subscription;
 
+  filterTextValue = ''
   loadingComplete = false
   errorMessage = ''
   products?: Product[];
@@ -20,6 +21,10 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   }
 
+  receiveFilterText(text: string) {
+    this.filterTextValue = text
+    console.log(this.filterTextValue)
+  }
   ngOnInit(): void {
     this.psSubscription =
       this.ps
