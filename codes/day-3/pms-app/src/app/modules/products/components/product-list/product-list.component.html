@@ -3,7 +3,8 @@
 </ng-template>
 
 <ng-template #errorTemplate>
-    <span>{{errorMessage}}</span>
+    <!-- <span>{{errorMessage}}</span> -->
+    <app-error-template [errorInfo]="errorMessage"></app-error-template>
 </ng-template>
 
 <ng-template #noRecordTemplate>

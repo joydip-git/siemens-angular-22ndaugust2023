@@ -125,6 +125,27 @@ Routing: @angular/router => RouterModule
 DI:
 	any component, pipe, directive, module, service, if wants DI of a service, must be marked with @Injectable() decorator
 
+
+event-name interface-name	method-name
+X			 OnX				ngOnX
+init		 OnInit           ngOnInit
+
+data|pipe-name:'':12:true
+
+pipe-name(data,'',12,true)
+
+p.productName|uppercase
+
+@Pipe({name:'uppercase'})
+class X{
+	transform(val:any,...args:any[]){
+		return val.toLocaleUpperCase()
+	}
+}
+
+
+joydip.mondal@gmail.com
+
 		
 
 

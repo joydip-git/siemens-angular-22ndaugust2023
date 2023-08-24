@@ -9,6 +9,7 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductService } from './services/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductFilterPipe } from './pipes/product-filter.pipe';
+import { ErrorTemplateComponent } from './components/error-template/error-template.component';
 
 
 
@@ -19,7 +20,8 @@ import { ProductFilterPipe } from './pipes/product-filter.pipe';
     AddProductComponent,
     UpdateProductComponent,
     FilterProductComponent,
-    ProductFilterPipe
+    ProductFilterPipe,
+    ErrorTemplateComponent
   ],
   imports: [
     CommonModule,
