@@ -6,6 +6,8 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { FilterProductComponent } from './components/filter-product/filter-product.component';
 import { ProductsRoutingModule } from './products-routing.module';
+import { ProductService } from './services/product.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -19,7 +21,9 @@ import { ProductsRoutingModule } from './products-routing.module';
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
-  ]
+    ProductsRoutingModule,
+    HttpClientModule
+  ],
+  providers: [ProductService]
 })
 export class ProductsModule { }

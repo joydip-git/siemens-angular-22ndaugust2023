@@ -121,6 +121,10 @@ Routing: @angular/router => RouterModule
 	component directive:router-outlet
 	attribute directive: routerLink
 
+
+DI:
+	any component, pipe, directive, module, service, if wants DI of a service, must be marked with @Injectable() decorator
+
 		
 
 
