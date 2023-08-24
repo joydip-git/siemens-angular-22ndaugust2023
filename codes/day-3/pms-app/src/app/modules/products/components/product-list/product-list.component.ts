@@ -2,6 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/models/product';
+import { StorageService } from '../../services/storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -17,10 +19,17 @@ export class ProductListComponent implements OnInit, OnDestroy {
   errorMessage = ''
   products?: Product[];
 
-  constructor(private ps: ProductService) {
+  constructor(
+    private ps: ProductService,
+    private storageService: StorageService<Product>,
+    private router: Router
+  ) {
 
   }
-
+  redirectToUpdateView(p: Product) {
+    this.storageService.publish(p)
+    this.router.navigate(['/products/update'])
+  }
   receiveFilterText(text: string) {
     this.filterTextValue = text
     console.log(this.filterTextValue)

@@ -10,6 +10,7 @@ import { ProductService } from './services/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductFilterPipe } from './pipes/product-filter.pipe';
 import { ErrorTemplateComponent } from './components/error-template/error-template.component';
+import { StorageService } from './services/storage.service';
 
 
 
@@ -28,6 +29,6 @@ import { ErrorTemplateComponent } from './components/error-template/error-templa
     ProductsRoutingModule,
     HttpClientModule
   ],
-  providers: [ProductService]
+  providers: [ProductService, StorageService]
 })
 export class ProductsModule { }

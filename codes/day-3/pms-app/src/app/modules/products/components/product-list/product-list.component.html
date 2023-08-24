@@ -24,6 +24,7 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Rating</th>
+                    <th>Edit</th>
                     <th>Delete</th>
                 </tr>
             </thead>
@@ -41,6 +42,9 @@
                     </td>
                     <td>
                         {{p.starRating}}
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" (click)="redirectToUpdateView(p)">Edit</button>
                     </td>
                     <td>
                         <button type="button" class="btn btn-danger">Delete</button>
