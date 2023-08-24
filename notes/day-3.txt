@@ -1,0 +1,16 @@
+1. Service part-2 and 3
+2. rotuing
+3. interaction between nested components
+4. pipe
+5. HTTP requests
+6. RxJS
+7. asynchronity
+
+
+HttpClient: bulit-in service class
+	- get(), put(), post(), delete() etc.
+module: HttpClientModule
+package: @angualar/common/http
+
+reactivex.io
+rxjs: reactive extensions to JS
