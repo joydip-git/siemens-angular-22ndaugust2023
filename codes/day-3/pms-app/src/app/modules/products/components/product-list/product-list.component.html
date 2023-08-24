@@ -1,1 +1,19 @@
-<p>product-list works!</p>
+<ng-template #loadingTemplate>
+    <span>Loading...please wait</span>
+</ng-template>
+
+<ng-template #errorTemplate>
+    <span>{{errorMessage}}</span>
+</ng-template>
+
+<ng-template #noRecordTemplate>
+    <span>No record found....</span>
+</ng-template>
+
+<div *ngIf="loadingComplete===true;else loadingTemplate">
+    <div *ngIf="errorMessage==='';else errorTemplate">
+        <table *ngIf="products;else noRecordTemplate">
+
+        </table>
+    </div>
+</div>
