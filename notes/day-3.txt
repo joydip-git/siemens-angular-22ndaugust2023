@@ -13,4 +13,6 @@ module: HttpClientModule
 package: @angualar/common/http
 
 reactivex.io
+	- net, java, js, scala, ....
+
 rxjs: reactive extensions to JS
